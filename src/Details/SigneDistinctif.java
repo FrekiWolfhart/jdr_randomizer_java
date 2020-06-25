@@ -19,6 +19,7 @@ public class SigneDistinctif {
         int index;
         for(int position = 0; position < nbSignes; position ++){
             index = rand.nextInt()%listeSignes.length;
+            if(index < 0) index = -1 * index;
 
             if(position == 0){
                 signes = listeSignes[index];

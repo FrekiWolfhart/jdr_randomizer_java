@@ -17,6 +17,7 @@ public class Personnage{
     private String signeAstral;
     private String lieuDeNaissance;
     private String signeDistinctif;
+    private int nombreFamille;
 
     public Personnage(){
         Random rand = new Random();
@@ -38,6 +39,7 @@ public class Personnage{
         this.signeAstral = new SigneAstral().choisisSigneAstral();
         this.lieuDeNaissance = new LieuDeNaissance().choisisLieuDeNaissance(this);
         this.signeDistinctif = new SigneDistinctif().choisisSigneDistinctif(rand.nextInt()%4);
+        this.nombreFamille = new NombreFamille().choisisNombreFamille(this);
     }
 
     public Genre getGenre(){
@@ -57,5 +59,6 @@ public class Personnage{
         System.out.println("Signe Astral: " + this.signeAstral);
         System.out.println("Lieu de naissance: " + this.lieuDeNaissance);
         System.out.println("Signes distinctifs: " + this.signeDistinctif);
+        System.out.println("A " + this.nombreFamille + " frères et soeurs.");
     }
 }
