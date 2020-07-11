@@ -5,7 +5,7 @@ import java.util.Random;
 import src.Details.*;
 import src.Details.Nom.*;
 
-public class Personnage{
+public class Personnnage{
     private String nom;
     private Genre genre;
     private Espece espece;
@@ -19,7 +19,7 @@ public class Personnage{
     private String signeDistinctif;
     private int nombreFamille;
 
-    public Personnage(){
+    public Personnnage(){
         Random rand = new Random();
         this.espece = Espece.values()[rand.nextInt(Espece.values().length)];
         this.genre = Genre.values()[rand.nextInt(Genre.values().length)];

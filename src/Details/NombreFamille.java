@@ -2,7 +2,7 @@ package src.Details;
 
 import java.util.Random;
 
-import src.Personnage;
+import src.Personnnage;
 
 public class NombreFamille {
     
@@ -12,7 +12,7 @@ public class NombreFamille {
         return index;
     }
 
-    public int choisisNombreFamille(Personnage personnage){
+    public int choisisNombreFamille(Personnnage personnage){
         switch(personnage.getEspece()){
             case Elfe: return nombreFamille(4);
             case Nain: return nombreFamille(4);

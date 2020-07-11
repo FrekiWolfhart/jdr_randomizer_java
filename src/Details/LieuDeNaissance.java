@@ -2,7 +2,7 @@ package src.Details;
 
 import java.util.Random;
 
-import src.Personnage;
+import src.Personnnage;
 
 public class LieuDeNaissance {
 
@@ -56,7 +56,7 @@ public class LieuDeNaissance {
         return lieu;
     }
     
-    public String choisisLieuDeNaissance(Personnage personnage){
+    public String choisisLieuDeNaissance(Personnnage personnage){
         switch(personnage.getEspece()){
             case Humain: return this.lieuDeNaissanceHumain();
             case Halfling: return this.lieuDeNaissanceHalfling();

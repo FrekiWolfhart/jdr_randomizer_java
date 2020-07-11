@@ -2,11 +2,11 @@ package src.Details;
 
 import java.util.Random;
 
-import src.Personnage;
+import src.Personnnage;
 
 public class Taille {
     
-    private double tailleElfe(Personnage personnage){
+    private double tailleElfe(Personnnage personnage){
         Random rand = new Random();
         double taille;
 
@@ -22,7 +22,7 @@ public class Taille {
         return taille;
     }
 
-    private double tailleNain(Personnage personnage){
+    private double tailleNain(Personnnage personnage){
         Random rand = new Random();
         double taille;
 
@@ -38,7 +38,7 @@ public class Taille {
         return taille;
     }
 
-    private double tailleHumain(Personnage personnage){
+    private double tailleHumain(Personnnage personnage){
         Random rand = new Random();
         double taille;
 
@@ -54,7 +54,7 @@ public class Taille {
         return taille;
     }
 
-    private double tailleHalfling(Personnage personnage){
+    private double tailleHalfling(Personnnage personnage){
         Random rand = new Random();
         double taille;
 
@@ -70,7 +70,7 @@ public class Taille {
         return taille;
     }
 
-    public double choisisTaille(Personnage personnage){
+    public double choisisTaille(Personnnage personnage){
         double taille;
         switch(personnage.getEspece()){
             case Humain: taille = this.tailleHumain(personnage); break;

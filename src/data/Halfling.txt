@@ -1,0 +1,14 @@
+Noms
+Féminin
+Agnès,Alice,Elena,Eva,Frida,Gréta,Hanna,Heidi,Hilda,Janna,Karin,Leni,Marie,Pétra,Silma,Sophia,Susi,Théda,Ulla,Wanda
+Masculin
+Adam,Albert,Alfred,Axel,Carl,Edgar,Hugo,Jakob,Ludo,Max,Niklaus,Oskar,Paul,Ralf,Rudi,Théo,Thomas,Udo,Viktor,Walter
+
+Lieu de naissance
+Le Moot,Humain
+
+Couleur
+Yeux
+Bleu,Noisette,Noisette,Marron clair,Marron clair,Marron,Marron,Marron foncé,Marron foncé,Marron foncé
+Cheveux
+Blond cendré,Paille,Blond,Blond,Aubrun,Roux,Châtin clair,Châtin,Brun,Noir

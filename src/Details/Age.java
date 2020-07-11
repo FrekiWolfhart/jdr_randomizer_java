@@ -2,11 +2,11 @@ package src.Details;
 
 import java.util.Random;
 
-import src.Personnage;
+import src.Personnnage;
 
 public class Age {
 
-    public int chooseAge(Personnage personnage){
+    public int chooseAge(Personnnage personnage){
         int age;
         Random rand = new Random();
 

@@ -1,0 +1,17 @@
+Noms
+Féminin
+Alexa,Alfrida,Béatrix,Bianka,Carlott,Elfrida,Élise,Gabrielle,Gretchen,Hanna,Ilsa,Klara,JArla,Ludmilla,Mathilde,Régina,Solveig,Théodora,Ulrike,Wertha
+Masculin
+Adelbert,Albrecht,Berthold,Dieter,Eckhardt,Félix,Gottfried,Gustav,Heinz,Johann,Konrad,Leopold,Magnus,Otto,Pieter,Rudiger,Siegfried,Ulrich,Waldemar,Wolfgang
+
+Lieu de naissance
+Province
+Averland,Hochland,Middenland,Nordland,Ostermark,Ostland,Reikland,Stirland,Talabecland,Wissenland
+Environnement
+Cité,Ville prospère,Bourg,Ville fortifiée,Village agricole,Village pauvre,Petite communauté,Ferme (élevage),Ferme (culture),Taudis
+
+Couleur
+Yeux
+Gris clair,Gris-bleu,Bleu,Vert,Cuivre,Marron clair,Marron,Marron foncé,Mauve,Noir
+Cheveux
+Blond cendré,Paille,Blond,Aubrun,Roux,Châtin clair,Châtin,Châtin,Brun,Noir

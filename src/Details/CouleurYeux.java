@@ -2,7 +2,7 @@ package src.Details;
 
 import java.util.Random;
 
-import src.Personnage;
+import src.Personnnage;
 
 public class CouleurYeux {
 
@@ -46,7 +46,7 @@ public class CouleurYeux {
         return couleur;
     }
 
-    public String choisisCouleurYeux(Personnage personnage){
+    public String choisisCouleurYeux(Personnnage personnage){
         String couleur;
 
         switch(personnage.getEspece()){

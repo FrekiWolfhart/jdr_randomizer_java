@@ -1,7 +1,7 @@
 package src.Details.Nom;
 
-import src.Personnage;
-import src.Details.Genre;
+import src.Personnnage;
+import src.Details.*;
 
 import java.util.Random;
 
@@ -27,7 +27,7 @@ public class NomHalfling{
         return name;
     }
 
-    public String createNom(Personnage personnage){
+    public String createNom(Personnnage personnage){
         if(personnage.getGenre() == Genre.Femme){
             return this.femaleName();
         }

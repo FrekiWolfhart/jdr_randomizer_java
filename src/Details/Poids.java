@@ -2,11 +2,11 @@ package src.Details;
 
 import java.util.Random;
 
-import src.Personnage;
+import src.Personnnage;
 
 public class Poids {
 
-    public int choisisPoids(Personnage personnage){
+    public int choisisPoids(Personnnage personnage){
         Random rand = new Random();
         int poids;
 

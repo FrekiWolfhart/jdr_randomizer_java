@@ -1,0 +1,14 @@
+Noms
+Féminin
+Anika,Asta,Astrid,Berta,Birgit,Dagmar,Elsa,Erika,Franziska,Gréta,Hunni,Ingrid,Janna,Karin,Pétra,Sigrid,Sigrun,Silma,Thylda,Ulla
+Masculin
+Bardin,Brokk,Dimzad,Durak,Garil,Gottri,Grundi,HArgin,Imrak,Kargun,Jotunn,Magnar,Mordrin,Nargond,Orzad,Ragnar,Snorri,Storri,Thingrim,Urgrim
+
+Lieu de naissance
+Humain,Karak Norn,Karak Izor,Karak Hirn,Karak Kadrin,Kazak-a-Karak,Zhufbar,Barak Varr
+
+Couleur
+Yeux
+Gris clair,Bleu,Cuivre,Marron clair,Marron clair,Marron,Marron,Marron foncé,Marron foncé,Mauve
+Cheveux
+Blond cendré,Blond,Aubrun,Roux,Châtin clair,Châtin,Châtin,Brun,Bleu foncé,Noir

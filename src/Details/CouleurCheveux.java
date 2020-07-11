@@ -2,7 +2,7 @@ package src.Details;
 
 import java.util.Random;
 
-import src.Personnage;
+import src.Personnnage;
 
 public class CouleurCheveux {
 
@@ -26,7 +26,7 @@ public class CouleurCheveux {
         return couleur;
     }
     
-    public String choisisCouleurCheveux(Personnage personnage){
+    public String choisisCouleurCheveux(Personnnage personnage){
         if(personnage.getEspece() == Espece.Elfe) return couleurElfe();
         return couleurCheveux(); 
     }
