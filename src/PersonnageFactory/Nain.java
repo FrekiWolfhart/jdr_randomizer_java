@@ -6,6 +6,7 @@ public class Nain extends Personnage{
         super("./data/Nain.txt", "Nain");
         super.pick();
         this.raceSpecific();
+        super.stats();
     }
     
     private void raceSpecific(){

@@ -5,6 +5,9 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.Random;
 
+import src.CaracteristiquesFactory.Caracteristiques;
+import src.CaracteristiquesFactory.CaracteristiquesFactory;
+
 public abstract class Personnage {
 
     protected Random random;
@@ -21,7 +24,8 @@ public abstract class Personnage {
     protected int nombreFamille;
     protected String signeAstral;
     protected String signesDistinctif;
-    
+    protected Caracteristiques caracteristiques;
+
     protected final int attack = 1;
 
     Personnage(String cheminFichier, String espece){
@@ -32,6 +36,10 @@ public abstract class Personnage {
 
     public String getEspece(){
         return this.espece;
+    }
+
+    public Random getRandom() {
+        return random;
     }
 
     private void pickName(Scanner scanner){
@@ -167,6 +175,11 @@ public abstract class Personnage {
         pickGeneric();
     }
 
+    protected void stats(){
+        CaracteristiquesFactory factory = new CaracteristiquesFactory();
+        this.caracteristiques = factory.createCaracteristiques(this);
+    }
+
     public void print(){
         System.out.println("DETAILS DU PERSONNAGE");
         System.out.println("Nom: " + this.name);
@@ -177,6 +190,7 @@ public abstract class Personnage {
         System.out.println("A " + this.nombreFamille + " frères et soeurs.");
         System.out.println("Signe Astral: " + this.signeAstral);
         System.out.println("Signes Distinctif: " + this.signesDistinctif);
+        this.caracteristiques.print();
     }
     
 }

@@ -6,6 +6,7 @@ public class Halfling extends Personnage{
         super("./data/Halfling.txt", "Halfling");
         super.pick();
         this.raceSpecific();
+        super.stats();
     }
 
     private void raceSpecific(){

@@ -6,6 +6,7 @@ public class Elfe extends Personnage{
         super("./data/Elfe.txt", "Elfe");
         super.pick();
         this.raceSpecific();
+        super.stats();
     }
     
     private void raceSpecific(){
