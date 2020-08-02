@@ -19,6 +19,8 @@ public abstract class Personnage {
     protected String couleurYeux;
     protected String lieuNaissance;
     protected int nombreFamille;
+    protected String signeAstral;
+    protected String signesDistinctif;
     
     protected final int attack = 1;
 
@@ -26,6 +28,10 @@ public abstract class Personnage {
         this.fichierSource = new File(cheminFichier);
         this.espece = espece;
         this.random = new Random();
+    }
+
+    public String getEspece(){
+        return this.espece;
     }
 
     private void pickName(Scanner scanner){
@@ -112,6 +118,40 @@ public abstract class Personnage {
         this.couleurCheveux = hair[this.random.nextInt(hair.length)];
     }
 
+    private void pickGeneric(){
+        this.fichierSource = new File("./data/Generique.txt");
+        try {
+            Scanner scannerGen = new Scanner(this.fichierSource);
+            pickSigneAstral(scannerGen);
+            pickSignesDistinctif(scannerGen, this.random.nextInt(5));
+            scannerGen.close();
+        } catch(FileNotFoundException e){
+            System.out.println("Fichier inexistant");
+            e.printStackTrace();
+        }
+    }
+
+    private void pickSigneAstral(Scanner scanner){
+        scanner.nextLine();
+
+        String[] signes = scanner.nextLine().split(",");
+        this.signeAstral = signes[this.random.nextInt(signes.length)];
+    }
+
+    private void pickSignesDistinctif(Scanner scanner, int nbSignes){
+        while(scanner.hasNextLine() && !scanner.nextLine().equals("Signes Distinctif")){}
+
+        String[] distinctifs = scanner.nextLine().split(",");
+        this.signesDistinctif = "";
+
+        for(int index = 0; index < nbSignes; index++){
+            this.signesDistinctif += distinctifs[this.random.nextInt(distinctifs.length)];
+            if(index < nbSignes-1) this.signesDistinctif += ", ";
+        }
+
+        this.signesDistinctif.trim();
+    }
+
     protected void pick(){
         this.genre = (this.random.nextInt()%2 == 0) ? "Masculin" : "Féminin";
         try{
@@ -123,17 +163,20 @@ public abstract class Personnage {
         } catch(FileNotFoundException e){
             System.out.println("Fichier inexistant.");
             e.printStackTrace();
-        } 
+        }
+        pickGeneric();
     }
 
     public void print(){
         System.out.println("DETAILS DU PERSONNAGE");
-        System.out.println("Nom:" + this.name);
-        System.out.println("Espèce/Genre:" + this.espece + "/" + this.genre);
+        System.out.println("Nom: " + this.name);
+        System.out.println("Espèce/Genre: " + this.espece + "/" + this.genre);
         System.out.println(this.age + " ans, " + this.poids + " kg, " + this.taille + "m");
-        System.out.println("Cheveux " + this.couleurCheveux + ", Yeux " + this.couleurYeux);
+        System.out.println("Cheveux: " + this.couleurCheveux + ", Yeux: " + this.couleurYeux);
         System.out.println("Lieu de naissance: " + this.lieuNaissance);
         System.out.println("A " + this.nombreFamille + " frères et soeurs.");
+        System.out.println("Signe Astral: " + this.signeAstral);
+        System.out.println("Signes Distinctif: " + this.signesDistinctif);
     }
     
 }
