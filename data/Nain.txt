@@ -4,7 +4,7 @@ Anika,Asta,Astrid,Berta,Birgit,Dagmar,Elsa,Erika,Franziska,Gréta,Hunni,Ingrid,J
 Masculin
 Bardin,Brokk,Dimzad,Durak,Garil,Gottri,Grundi,HArgin,Imrak,Kargun,Jotunn,Magnar,Mordrin,Nargond,Orzad,Ragnar,Snorri,Storri,Thingrim,Urgrim
 
-Lieu de naissance
+Lieu de Naissance
 Humain,Karak Norn,Karak Izor,Karak Hirn,Karak Kadrin,Kazak-a-Karak,Zhufbar,Barak Varr
 
 Couleur

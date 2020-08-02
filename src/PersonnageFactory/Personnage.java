@@ -9,6 +9,7 @@ public abstract class Personnage {
 
     protected Random random;
     protected File fichierSource;
+    protected String espece;
     protected String genre;
     protected String name;
     protected int age;
@@ -21,13 +22,14 @@ public abstract class Personnage {
     
     protected final int attack = 1;
 
-    Personnage(String cheminFichier){
+    Personnage(String cheminFichier, String espece){
         this.fichierSource = new File(cheminFichier);
+        this.espece = espece;
         this.random = new Random();
     }
 
     private void pickName(Scanner scanner){
-        if(this.genre == "Masculin"){
+        if(this.genre.equals("Masculin")){
                 while(scanner.hasNextLine() && !scanner.hasNext("Masculin")){
                 scanner.nextLine();
             }
@@ -53,15 +55,34 @@ public abstract class Personnage {
         this.name = names[this.random.nextInt(names.length)];
     }
 
+    private void humanBirthplace(Scanner scanner){
+        while(scanner.hasNextLine() && !scanner.nextLine().equals("Lieu de Naissance")){}
+
+        scanner.nextLine();
+        String[] provinces = scanner.nextLine().split(",");
+        String province = provinces[this.random.nextInt(provinces.length)];
+
+        scanner.nextLine();
+        String[] environnements = scanner.nextLine().split(",");
+        String environnement = environnements[this.random.nextInt(environnements.length)];
+
+        this.lieuNaissance = province + ", " + environnement;
+    }
+
     private void pickBirthplace(Scanner scanner){
-        while(scanner.nextLine() != "Lieu de Nassance"){}
+        if(this.espece.equals("Humain")) {
+            humanBirthplace(scanner);
+            return ;
+        }
+
+        while(scanner.hasNextLine() && !scanner.nextLine().equals("Lieu de Naissance")){}
 
         String[] places = scanner.nextLine().split(",");
         this.lieuNaissance = places[this.random.nextInt(places.length)];
 
-        if(this.lieuNaissance == "Humain"){
+        if(this.lieuNaissance.equals("Humain")){
             try{
-                pickBirthplace(new Scanner(new File("../../data/Humain.txt")));
+                humanBirthplace(new Scanner(new File("./data/Humain.txt")));
             }
             catch(FileNotFoundException e){
                 System.out.println("Fichier inexistant.");
@@ -71,21 +92,21 @@ public abstract class Personnage {
     }
 
     private void pickColor(Scanner scanner){
-        while(scanner.nextLine() != "Couleur"){}
+        while(scanner.hasNextLine() && !scanner.nextLine().equals("Couleur")){}
 
         pickEyeColor(scanner);
         pickHairColor(scanner);
     }
 
     private void pickEyeColor(Scanner scanner){
-        while(scanner.nextLine() != "Yeux"){}
+        while(scanner.hasNextLine() && !scanner.nextLine().equals("Yeux")){}
 
         String[] eyes = scanner.nextLine().split(",");
         this.couleurYeux = eyes[this.random.nextInt(eyes.length)];
     }
 
     private void pickHairColor(Scanner scanner){
-        while(scanner.nextLine() != "Cheveux"){}
+        while(scanner.hasNextLine() && !scanner.nextLine().equals("Cheveux")){}
 
         String[] hair = scanner.nextLine().split(",");
         this.couleurCheveux = hair[this.random.nextInt(hair.length)];
@@ -103,6 +124,16 @@ public abstract class Personnage {
             System.out.println("Fichier inexistant.");
             e.printStackTrace();
         } 
+    }
+
+    public void print(){
+        System.out.println("DETAILS DU PERSONNAGE");
+        System.out.println("Nom:" + this.name);
+        System.out.println("Espèce/Genre:" + this.espece + "/" + this.genre);
+        System.out.println(this.age + " ans, " + this.poids + " kg, " + this.taille + "m");
+        System.out.println("Cheveux " + this.couleurCheveux + ", Yeux " + this.couleurYeux);
+        System.out.println("Lieu de naissance: " + this.lieuNaissance);
+        System.out.println("A " + this.nombreFamille + " frères et soeurs.");
     }
     
 }

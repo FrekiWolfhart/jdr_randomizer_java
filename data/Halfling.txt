@@ -4,7 +4,7 @@ Agnès,Alice,Elena,Eva,Frida,Gréta,Hanna,Heidi,Hilda,Janna,Karin,Leni,Marie,Pé
 Masculin
 Adam,Albert,Alfred,Axel,Carl,Edgar,Hugo,Jakob,Ludo,Max,Niklaus,Oskar,Paul,Ralf,Rudi,Théo,Thomas,Udo,Viktor,Walter
 
-Lieu de naissance
+Lieu de Naissance
 Le Moot,Humain
 
 Couleur

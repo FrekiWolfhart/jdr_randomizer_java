@@ -3,7 +3,7 @@ package src.PersonnageFactory;
 public class Elfe extends Personnage{
 
     public Elfe(){
-        super("../../data/Elfe.txt");
+        super("./data/Elfe.txt", "Elfe");
         super.pick();
         this.raceSpecific();
     }

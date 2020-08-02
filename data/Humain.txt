@@ -4,7 +4,7 @@ Alexa,Alfrida,Béatrix,Bianka,Carlott,Elfrida,Élise,Gabrielle,Gretchen,Hanna,Il
 Masculin
 Adelbert,Albrecht,Berthold,Dieter,Eckhardt,Félix,Gottfried,Gustav,Heinz,Johann,Konrad,Leopold,Magnus,Otto,Pieter,Rudiger,Siegfried,Ulrich,Waldemar,Wolfgang
 
-Lieu de naissance
+Lieu de Naissance
 Province
 Averland,Hochland,Middenland,Nordland,Ostermark,Ostland,Reikland,Stirland,Talabecland,Wissenland
 Environnement
