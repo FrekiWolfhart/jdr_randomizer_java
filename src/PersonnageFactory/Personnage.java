@@ -26,7 +26,6 @@ public abstract class Personnage {
     protected String signesDistinctif;
     protected Caracteristiques caracteristiques;
 
-    protected final int attack = 1;
 
     Personnage(String cheminFichier, String espece){
         this.fichierSource = new File(cheminFichier);
@@ -157,7 +156,7 @@ public abstract class Personnage {
             if(index < nbSignes-1) this.signesDistinctif += ", ";
         }
 
-        this.signesDistinctif.trim();
+        this.signesDistinctif = this.signesDistinctif.trim();
     }
 
     protected void pick(){

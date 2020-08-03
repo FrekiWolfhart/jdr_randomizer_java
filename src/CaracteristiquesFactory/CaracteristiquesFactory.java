@@ -4,17 +4,13 @@ import src.PersonnageFactory.Personnage;
 
 public class CaracteristiquesFactory {
     public Caracteristiques createCaracteristiques(Personnage personnage){
-        switch(personnage.getEspece()){
-            case "Elfe":
-                return new Elfe(personnage.getRandom());
-            case "Nain":
-                return new Nain(personnage.getRandom());
-            case "Humain":
-                return new Humain(personnage.getRandom());
-            case "Halfling":
-                return new Halfling(personnage.getRandom());
-        }
+        return switch (personnage.getEspece()) {
+            case "Elfe" -> new Elfe(personnage.getRandom());
+            case "Nain" -> new Nain(personnage.getRandom());
+            case "Humain" -> new Humain(personnage.getRandom());
+            case "Halfling" -> new Halfling(personnage.getRandom());
+            default -> null;
+        };
 
-        return null;
     }
 }

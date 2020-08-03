@@ -6,14 +6,14 @@ public class Nain extends Caracteristiques{
 
     public Nain(Random random){
         super(random);
-        super.setCapacitéCombat(30);
-        super.setCapacitéTir(20);
+        super.setCapaciteCombat(30);
+        super.setCapaciteTir(20);
         super.setForce(20);
         super.setEndurance(30);
-        super.setAgilité(10);
+        super.setAgilite(10);
         super.setIntelligence(20);
         super.setForceMentale(20);
-        super.setSociabilité(10);
+        super.setSociabilite(10);
         super.setBlessures(11);
         super.setBonusForce();
         super.setBonusEndurance();
